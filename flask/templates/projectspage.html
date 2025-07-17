@@ -1,0 +1,14 @@
+{% extends "website_base.html" %}
+
+{% block title %}Projects By -- Aravind{% endblock %}
+
+{% block content %}
+  <h2>My Projects</h2>
+  <ul>
+    {% for project in projects %}
+      <li><strong>{{ project[1] }}</strong>: {{ project[2] }}</li>
+    {% else %}
+      <li>No projects found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
